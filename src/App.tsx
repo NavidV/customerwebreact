@@ -1,19 +1,20 @@
-import React from 'react';
-import CustomerDetails from './components/CustomerDetails';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CreateCustomer from './components/CreateCustomer';
+import CustomerDetails from './components/CustomerDetails';
+import Header from './components/Header';
+import Home from './components/Home';
 
 function App() {
     return (
-        <div className="container mt-3">
-            <div className="row">
-                <div className="col-md-6">
-                    <CustomerDetails />
-                </div>
-                <div className="col-md-6">
-                    <CreateCustomer />
-                </div>
-            </div>
-        </div>
+        <BrowserRouter>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/customer-details" element={<CustomerDetails />} />
+                <Route path="/create-customer" element={<CreateCustomer />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
+
 export default App;
