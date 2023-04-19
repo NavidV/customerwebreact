@@ -3,7 +3,7 @@ import axios from 'axios';
 import API_ENDPOINT from '../config';
 
 interface CustomerData {
-    CustomerId: number;
+    customerId: number;
     name: string;
 }
 
