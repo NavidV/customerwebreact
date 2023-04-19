@@ -39,10 +39,14 @@ const CustomerDetails: React.FC<Props> = () => {
                 setCustomerId(0);
             }
         } catch (error) {
+            if (axios.isAxiosError(error)) {
+                setErrorMessage(error.message);
+            } else {
+                setErrorMessage('An error occurred while fetching customer data.');
+            }
             console.error(error);
             setCustomerName('');
             setCustomerId(0);
-            setErrorMessage('An error occurred while fetching customer data.');
         }
     };
 
