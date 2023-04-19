@@ -52,11 +52,11 @@ const CustomerDetails: React.FC<Props> = () => {
 
     return (
         <div className="container my-5">
-            <h2 className="mb-4">Customer Details</h2>
+            <h2 className="mb-5">Customer Details</h2>
             <div className="row mb-3">
                 <div className="col-auto">
-                    <label htmlFor="customerId" className="form-label">Customer ID:</label>
-                    <input type="number" className="form-control" id="customerId"
+                    <label htmlFor="customerId mb-3" className="form-label">Customer ID:</label>
+                    <input type="number" className="form-control mb-3" id="customerId"
                         value={customerId ?? ''}
                         onChange={(event) => setCustomerId(Number(event.target.value))} />
 
