@@ -1,0 +1,2 @@
+C:\source\repos\customerwebreact\customerwebreact\obj\Debug\customerwebreact.esproj.SuggestedBindingRedirects.cache
+C:\source\repos\customerwebreact\customerwebreact\obj\Debug\customerwebreact.esproj.CoreCompileInputs.cache

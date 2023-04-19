@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CustomerDetails from './components/CustomerDetails';
+import CreateCustomerDetails from './components/CreateCustomer';
+import CreateCustomer from './components/CreateCustomer';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div style={{ display: "flex" }}>
+            <div style={{ flex: 1 }}>
+                <CustomerDetails />
+            </div>
+            <div style={{ flex: 1 }}>
+                <CreateCustomer />
+            </div>
+        </div>
+    );
 }
 
 export default App;
