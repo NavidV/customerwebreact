@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import API_ENDPOINT from '../config';
 
 interface CustomerData {
     CustomerId: number;
     name: string;
 }
-
-const API_ENDPOINT = 'https://customertestapiservice.azurewebsites.net/api/Customer';
 
 const CreateCustomer: React.FC = () => {
     const [customerId, setCustomerId] = useState<number | null>(null);
@@ -40,7 +39,7 @@ const CreateCustomer: React.FC = () => {
                 </div>
                 <button type="submit" className="btn btn-primary mb-3">Create Customer</button>
             </form>
-            {message && <p>{message}</p>}
+            {message && <div className="alert alert-info"> <p>{message}</p></div>}
         </div>
     );
 };

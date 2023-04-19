@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import API_ENDPOINT from '../config';
 
 interface CustomerData {
     isSuccess: boolean;
@@ -10,8 +11,6 @@ interface CustomerData {
 }
 
 interface Props { }
-
-const API_ENDPOINT = 'https://customertestapiservice.azurewebsites.net/api/Customer';
 
 const CustomerDetails: React.FC<Props> = () => {
     const [customerId, setCustomerId] = useState<number | null>(null);
