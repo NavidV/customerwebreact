@@ -47,22 +47,22 @@ const CustomerDetails: React.FC<Props> = () => {
     };
 
     return (
-        <div>
-            <h2>Customer Details</h2>
-            <div>
-                <label htmlFor="customerId">Customer ID:</label>
-                <input
-                    type="number"
-                    id="customerId"
-                    value={customerId ?? ''}
-                    onChange={(event) => setCustomerId(Number(event.target.value))}
-                />
-                <button onClick={handleClick}>Fetch Customer</button>
+        <div className="container my-5">
+            <h2 className="mb-4">Customer Details</h2>
+            <div className="row mb-3">
+                <div className="col-auto">
+                    <label htmlFor="customerId" className="form-label">Customer ID:</label>
+                    <input type="number" className="form-control" id="customerId"
+                        value={customerId ?? ''}
+                        onChange={(event) => setCustomerId(Number(event.target.value))} />
+
+                    <button className="btn btn-primary" onClick={handleClick}>Fetch Customer</button>
+                </div>
             </div>
-            {errorMessage && <div>{errorMessage}</div>}
+            {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
             <div>
                 <p>ID: {customerId}</p>
-                {customerName && <p>Customer Name: {customerName}</p>}
+                <p>Customer Name: {customerName}</p>
             </div>
         </div>
     );

@@ -27,20 +27,18 @@ const CreateCustomer: React.FC = () => {
     };
 
     return (
-        <div>
-            <h1>Create Customer</h1>
+        <div className="container my-5">
+            <h1 className="mb-5">Create Customer</h1>
             <form onSubmit={handleSubmit}>
-                <label>
-                    Customer ID:
-                    <input type="number" onChange={(event) => setCustomerId(parseInt(event.target.value))} />
-                </label>
-                <br />
-                <label>
-                    Name:
-                    <input type="text" onChange={(event) => setName(event.target.value)} />
-                </label>
-                <br />
-                <button type="submit">Create Customer</button>
+                <div className="mb-3">
+                    <label htmlFor="customerId" className="form-label">Customer ID:</label>
+                    <input type="number" className="form-control" id="customerId" onChange={(event) => setCustomerId(parseInt(event.target.value))} />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="name" className="form-label">Name:</label>
+                    <input type="text" className="form-control" id="name" onChange={(event) => setName(event.target.value)} />
+                </div>
+                <button type="submit" className="btn btn-primary mb-3">Create Customer</button>
             </form>
             {message && <p>{message}</p>}
         </div>
